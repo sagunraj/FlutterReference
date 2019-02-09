@@ -1,30 +1,26 @@
 import 'package:flutter/material.dart';
 
-void main()=>runApp(MaterialApp(home: TextBoxApp(),));
+void main()=>runApp(MaterialApp(home: ImageApp()));
 
-class TextBoxApp extends StatefulWidget {
-  _TextBoxAppState createState() => _TextBoxAppState();
+class ImageApp extends StatefulWidget {
+  _ImageAppState createState() => _ImageAppState();
 }
 
-class _TextBoxAppState extends State<TextBoxApp> {
+class _ImageAppState extends State<ImageApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Text Box App"),),
-      body: Container(
-        padding: EdgeInsets.all(12.0),
-        child: Column(
-          children: <Widget>[
-            TextField(
-              decoration: InputDecoration(
-                labelText: "Input anything here...",
-                icon: Icon(Icons.people),
-              ),
-              keyboardType: TextInputType.number
-            ),
-          ],
+        appBar: AppBar(
+         title: Text("Image App")
         ),
-      ),
+        body: Container(
+          child: Column(
+            children: <Widget>[
+              Image.asset('img/img.jpg'),
+              Text("Image")
+            ],
+          ),
+        )
     );
   }
 }
